@@ -27,12 +27,11 @@ code {
 }
 
 .alert {
-  width:auto;
   height: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 10px;
   text-align: center;
   margin-top: 20px;
+  font-size: 25px;
 
 
   background-color: rgb(226, 243, 249);
@@ -52,7 +51,6 @@ code {
   border-radius: 10px;
   
 }
-
 
 .container {
   margin-left: 10px;
@@ -85,6 +83,8 @@ code {
   text-align: left;
   background-color: #1e71c4;
   color: white;
+  width: 33%;
+
 }
 
 input, select {
@@ -108,5 +108,10 @@ margin-bottom: 15px;}
 
 .label {
   font-size: 20px;
+}
+
+#btn {
+  background-color: white;
+  padding: 8px;
 }
 

@@ -17,7 +17,7 @@ export default function Orders({ data, fetchData }) {
         <td>{order.name}</td>
         <td>{order.drink}</td>
         <td>{order.size}</td>
-
+        <section id = "btn">
         <button
           type="button"
           className="orderBtn"
@@ -26,6 +26,7 @@ export default function Orders({ data, fetchData }) {
         >
           Delete
         </button>
+        </section>
       </tr>
     );
   });

@@ -17,21 +17,21 @@ export default function Input({ postData }) {
 
   let sizes = ['Small', 'Medium', 'Large'];
 
-  const getInput = () => {
-    // e.preventDefault();
+  const handleClick = (e) => {
+    e.preventDefault();
     let result = {
       name: nameRef.current.value,
       size: sizeRef.current.value,
       drink: drinkRef.current.value,
     };
-    return result;
+    postData(result);
   };
 
-  function handleClick(e) {
-    e.preventDefault();
-    let data = getInput();
-    postData(data);
-  }
+//   function handleClick() {
+//     // e.preventDefault();
+//     let data = getInput();
+//     postData(data);
+//   }
 
   let choseDrink = drinks.map((drink, key) => {
     return (
@@ -56,13 +56,14 @@ export default function Input({ postData }) {
           <h2>Make an Order!</h2>
           <hr />
           <div className="form-group">
-            <label className="label">Your name</label>
+            <label className="label" >Your name</label>
 
             <div className="input-field">
               <input
                 type="text"
                 placeholder="Greetings traveler!"
                 ref={nameRef}
+                required
               />
             </div>
           </div>
