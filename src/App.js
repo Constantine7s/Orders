@@ -17,10 +17,6 @@ function App() {
     await axios.post("/neworder", data);
   };
 
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
   useEffect(() => {
     fetchData();
   }, [data]);

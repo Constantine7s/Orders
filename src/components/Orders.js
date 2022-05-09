@@ -1,18 +1,15 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default function Orders({ data, fetchData }) {
+  // for (const iterator of data) {
+  //     console.log(iterator)
 
-// for (const iterator of data) {
-//     console.log(iterator)
-    
-// }
+  // }
 
-async function deleteOrder(order) {
+  async function deleteOrder(order) {
     await axios.delete(`/del/${Number(order.target.id)}`);
-    fetchData()
+    fetchData();
   }
-
-
 
   let orders = data.map((order) => {
     return (
@@ -20,16 +17,15 @@ async function deleteOrder(order) {
         <td>{order.name}</td>
         <td>{order.drink}</td>
         <td>{order.size}</td>
-        <td>
-          <button
-            type="button"
-            className="btn"
-            id={order.id}
-            onClick={deleteOrder}
-          >
-            Delete
-          </button>
-        </td>
+
+        <button
+          type="button"
+          className="orderBtn"
+          id={order.id}
+          onClick={deleteOrder}
+        >
+          Delete
+        </button>
       </tr>
     );
   });
@@ -46,18 +42,10 @@ async function deleteOrder(order) {
               <th>Size</th>
             </tr>
           </thead>
-          <tbody>
-              {orders}
-          </tbody>
+          <tbody>{orders}</tbody>
         </table>
-        {
-        !orders.length && 
-          <div className="alert alert-info" role="alert">
-            Waiting for orders...        
-          </div>
-      }
+        {!orders.length && <div className="alert">Waiting for orders...</div>}
       </div>
     </div>
   );
 }
-
