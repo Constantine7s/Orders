@@ -18,20 +18,18 @@ export default function Input({ postData }) {
   let sizes = ['Small', 'Medium', 'Large'];
 
   const handleClick = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     let result = {
       name: nameRef.current.value,
       size: sizeRef.current.value,
       drink: drinkRef.current.value,
     };
-    postData(result);
+    if (result.name){
+        postData(result);
+    }
+    
   };
 
-//   function handleClick() {
-//     // e.preventDefault();
-//     let data = getInput();
-//     postData(data);
-//   }
 
   let choseDrink = drinks.map((drink, key) => {
     return (
