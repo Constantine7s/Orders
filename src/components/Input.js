@@ -87,6 +87,8 @@ export default function Input({ postData }) {
           </button>
         </form>
       </div>
+      <hr />
+
     </div>
   );
 }

@@ -21,6 +21,8 @@ code {
   font-size: 16px;
   margin-left: 10px;
   border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
   
 }
 
@@ -77,9 +79,34 @@ code {
 .table tr:hover {background-color: #ddd;}
 
 .table th {
+  font-size: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
   background-color: #1e71c4;
   color: white;
 }
+
+input, select {
+  margin-top: 20px ;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+div {
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 15px;}
+
+.label {
+  font-size: 20px;
+}
+

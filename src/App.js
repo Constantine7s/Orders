@@ -27,7 +27,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Input postData={postData}/>
-        <hr />
         <Orders data={data} fetchData={fetchData} />
       </header>
     </div>
