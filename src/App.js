@@ -2,9 +2,10 @@ import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import Input from './components/Input';
 import Orders from './components/Orders';
+import Popup from './components/Popup';
+
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Input postData={postData} />
         <Orders data={data} fetchData={fetchData} />
         <ToastContainer />
+        <Popup />
       </header>
     </div>
   );
