@@ -39,7 +39,7 @@ const pg = require("pg");
         rejectUnauthorised: false
       },
       migrations: {
-        directory: './db/migrations',
+        directory: './server/db/migrations',
       },
     },
   };
