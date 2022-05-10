@@ -1,12 +1,10 @@
 import { useRef } from 'react';
 import React from 'react';
 
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import alert from '../sounds/alert.mp3';
 
-export default function Input({ postData }) {
+export default function Input({ postData, setOrder, order }) {
   const nameRef = useRef(null);
   const drinkRef = useRef(null);
   const sizeRef = useRef(null);
@@ -20,36 +18,11 @@ export default function Input({ postData }) {
     'Mocha',
   ];
 
-  let alerts = [
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'NEW ORDER',
-    'TURKEY IS THE ONLY ANIMAL MORE CUNNING THAN HUMAN!',
-    'THEY KILLED KENNY!',
-    "YOU HAVEN'T SEEN EVERYTHING YET!",
-    'TRYING IS THE FIRST STEP TOWARDS FAILURE',
-  ];
 
   let sizes = ['Small', 'Medium', 'Large'];
 
-  let sound = new Audio(alert);
 
   const handleClick = (e) => {
-
-    sound.play();
 
     e.preventDefault();
 
@@ -59,9 +32,11 @@ export default function Input({ postData }) {
       drink: drinkRef.current.value,
     };
 
-    toast(alerts[Math.floor(Math.random() * 20)]);
-
-    postData(result);
+    if (result.name) {
+      
+      postData(result);
+      setOrder(order + 1)
+    }
   };
 
   let choseDrink = drinks.map((drink, key) => {
@@ -94,6 +69,7 @@ export default function Input({ postData }) {
                 type="text"
                 placeholder="Greetings traveler!"
                 ref={nameRef}
+                required
               />
             </div>
           </div>
