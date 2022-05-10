@@ -24,9 +24,8 @@ export default function Input({ postData }) {
       size: sizeRef.current.value,
       drink: drinkRef.current.value,
     };
-    if (result.name){
+   
         postData(result);
-    }
     
   };
 

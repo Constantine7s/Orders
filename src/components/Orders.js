@@ -1,10 +1,6 @@
 import axios from 'axios';
 
 export default function Orders({ data, fetchData }) {
-  // for (const iterator of data) {
-  //     console.log(iterator)
-
-  // }
 
   async function deleteOrder(order) {
     await axios.delete(`/del/${Number(order.target.id)}`);
