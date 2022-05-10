@@ -18,7 +18,7 @@ export default function Input({ postData }) {
   let sizes = ['Small', 'Medium', 'Large'];
 
   const handleClick = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     let result = {
       name: nameRef.current.value,
       size: sizeRef.current.value,
