@@ -1,6 +1,10 @@
 const express = require('express');
 const config = require('../../knexfile');
-const knex = require('knex')(config);
+
+const environment = process.env.DATABASE_URL ? "production" : "development"
+
+
+const knex = require('knex')(config[environment]);
 const router = express.Router();
 const cors = require('cors');
 router.use(cors());
