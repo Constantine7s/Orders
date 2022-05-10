@@ -5,7 +5,7 @@ const router = require("./routes");
 const cors = require("cors");
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../cc26-linky/build")));
+app.use(express.static(path.join(__dirname, "../build")));
 
 app.use(express.json());
 app.use("/", router);
