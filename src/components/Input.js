@@ -40,7 +40,7 @@ export default function Input({ postData }) {
     'TURKEY IS THE ONLY ANIMAL MORE CUNNING THAN HUMAN!',
     'THEY KILLED KENNY!',
     "YOU HAVEN'T SEEN EVERYTHING YET!",
-    'TRYING IS TH FIRST STEP TOWARDS FAILURE',
+    'TRYING IS THE FIRST STEP TOWARDS FAILURE',
   ];
 
   let sizes = ['Small', 'Medium', 'Large'];
@@ -48,6 +48,7 @@ export default function Input({ postData }) {
   let sound = new Audio(alert);
 
   const handleClick = (e) => {
+
     sound.play();
 
     e.preventDefault();
