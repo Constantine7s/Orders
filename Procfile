@@ -1,2 +1,2 @@
 release: npx knex migrate:latest
-web: npm run start
+web: npm run server
